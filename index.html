@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -9,88 +10,45 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <header class="bg-primary text-white text-center py-4 shadow">
+    <h1 class="fw-bold">Altitud</h1>
+    <p class="lead">Remodela tu hogar con estilo</p>
+  </header>
+
   <section class="py-5 bg-light">
     <div class="container">
-      <h2 class="text-center mb-5">Catálogo de Productos</h2>
+      <h2 class="text-center mb-5 text-primary">Catálogo de Productos</h2>
       <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div class="col">
-          <div class="card h-100" onclick="openModal('Llave Moen de Cocina - $99')">
-            <img src="images/moen_faucet.jpg" class="card-img-top" alt="Llave Moen">
-            <div class="card-body">
-              <h5 class="card-title">Llave Moen de Cocina</h5>
-              <p class="card-text">$99</p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100" onclick="openModal('Ducha Delta de Alta Presión - $129')">
-            <img src="images/delta_shower.jpg" class="card-img-top" alt="Ducha Delta">
-            <div class="card-body">
-              <h5 class="card-title">Ducha Delta de Alta Presión</h5>
-              <p class="card-text">$129</p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100" onclick="openModal('Lavamanos Kohler con Grifería - $249')">
-            <img src="images/kohler_sink.jpg" class="card-img-top" alt="Lavamanos Kohler">
-            <div class="card-body">
-              <h5 class="card-title">Lavamanos Kohler con Grifería</h5>
-              <p class="card-text">$249</p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100" onclick="openModal('Sofá Moderno Ashley - $799')">
-            <img src="images/ashley_sofa.jpg" class="card-img-top" alt="Sofá Ashley">
-            <div class="card-body">
-              <h5 class="card-title">Sofá Moderno Ashley</h5>
-              <p class="card-text">$799</p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100" onclick="openModal('Lámpara de Techo IKEA - $89')">
-            <img src="images/ikea_lamp.jpg" class="card-img-top" alt="Lámpara IKEA">
-            <div class="card-body">
-              <h5 class="card-title">Lámpara de Techo IKEA</h5>
-              <p class="card-text">$89</p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100" onclick="openModal('Luz de Techo Hampton Bay - $149')">
-            <img src="images/hamptonbay_ceilinglight.jpg" class="card-img-top" alt="Luz Hampton Bay">
-            <div class="card-body">
-              <h5 class="card-title">Luz de Techo Hampton Bay</h5>
-              <p class="card-text">$149</p>
-            </div>
-          </div>
-        </div>
+        <div class="col"><div class="card zoom" onclick="openModal('Sofá Moderno Ashley - $799')"><img src="images/sofa_moderno.jpg" class="card-img-top"><div class="card-body text-center"><h5>Sofá Moderno Ashley</h5><p>$799</p></div></div></div>
+        <div class="col"><div class="card zoom" onclick="openModal('Llave Moen de Cocina - $99')"><img src="images/llave_moen.jpg" class="card-img-top"><div class="card-body text-center"><h5>Llave Moen</h5><p>$99</p></div></div></div>
+        <div class="col"><div class="card zoom" onclick="openModal('Ducha Delta de Alta Presión - $129')"><img src="images/ducha_delta.jpg" class="card-img-top"><div class="card-body text-center"><h5>Ducha Delta</h5><p>$129</p></div></div></div>
+        <div class="col"><div class="card zoom" onclick="openModal('Lámpara IKEA - $89')"><img src="images/lampara_ikea.jpg" class="card-img-top"><div class="card-body text-center"><h5>Lámpara IKEA</h5><p>$89</p></div></div></div>
+        <div class="col"><div class="card zoom" onclick="openModal('Espejo Decorativo - $149')"><img src="images/espejo_decorativo.jpg" class="card-img-top"><div class="card-body text-center"><h5>Espejo Decorativo</h5><p>$149</p></div></div></div>
+        <div class="col"><div class="card zoom" onclick="openModal('Reloj de Pared - $45')"><img src="images/reloj_pared.jpg" class="card-img-top"><div class="card-body text-center"><h5>Reloj de Pared</h5><p>$45</p></div></div></div>
       </div>
     </div>
   </section>
 
-  <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-body text-center">
-          <p id="productMessage">¿Te interesa este artículo? Escríbenos y recibe el tuyo.</p>
-          <a href="#" id="whatsappLink" class="btn btn-success mt-3" target="_blank">Escríbenos por WhatsApp</a>
-        </div>
-      </div>
-    </div>
+  <div class="modal fade" id="productModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-body text-center">
+      <p id="productMessage">¿Te interesa este artículo? Escríbenos y recibe el tuyo.</p>
+      <a href="#" id="whatsappLink" class="btn btn-success mt-2" target="_blank">Escríbenos por WhatsApp</a>
+    </div></div></div>
   </div>
 
+  <div class="modal fade" id="languageModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-body text-center">
+      <p>¿Quieres ver esta página en inglés?</p>
+      <button class="btn btn-primary me-2" onclick="switchLang('en')" data-bs-dismiss="modal">Sí, cambiar</button>
+      <button class="btn btn-secondary" data-bs-dismiss="modal">No, gracias</button>
+    </div></div></div>
+  </div>
+
+  <footer class="bg-primary text-white text-center p-3 mt-5">
+    <p>&copy; 2025 Altitud. Todos los derechos reservados.</p>
+  </footer>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    function openModal(productName) {
-      const baseUrl = "https://wa.me/16464062230?text=" + encodeURIComponent("Hola, estoy interesado en: " + productName);
-      document.getElementById("productMessage").innerText = "¿Te interesa este artículo? Escríbenos y recibe el tuyo.";
-      document.getElementById("whatsappLink").href = baseUrl;
-      const modal = new bootstrap.Modal(document.getElementById("productModal"));
-      modal.show();
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
