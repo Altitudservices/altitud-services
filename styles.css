@@ -2,3 +2,9 @@
 body {
   font-family: 'Blinker', sans-serif;
 }
+.zoom {
+  transition: transform 0.3s ease;
+}
+.zoom:hover {
+  transform: scale(1.05);
+}
