@@ -4,50 +4,73 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Altitud | Catálogo</title>
+  <title>Altitud | Tienda</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Blinker:wght@400;600;700&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="bg-primary text-white text-center py-4 shadow">
+  <header class="text-white text-center py-4" style="background-color:#8B0000;">
     <h1 class="fw-bold">Altitud</h1>
-    <p class="lead">Remodela tu hogar con estilo</p>
+    <p class="lead">Productos para tu hogar con estilo</p>
   </header>
 
-  <section class="py-5 bg-light">
+  <main class="bg-light py-5">
     <div class="container">
-      <h2 class="text-center mb-5 text-primary">Catálogo de Productos</h2>
-      <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div class="col"><div class="card zoom" onclick="openModal('Sofá Moderno Ashley - $799')"><img src="images/sofa_moderno.jpg" class="card-img-top"><div class="card-body text-center"><h5>Sofá Moderno Ashley</h5><p>$799</p></div></div></div>
-        <div class="col"><div class="card zoom" onclick="openModal('Llave Moen de Cocina - $99')"><img src="images/llave_moen.jpg" class="card-img-top"><div class="card-body text-center"><h5>Llave Moen</h5><p>$99</p></div></div></div>
-        <div class="col"><div class="card zoom" onclick="openModal('Ducha Delta de Alta Presión - $129')"><img src="images/ducha_delta.jpg" class="card-img-top"><div class="card-body text-center"><h5>Ducha Delta</h5><p>$129</p></div></div></div>
-        <div class="col"><div class="card zoom" onclick="openModal('Lámpara IKEA - $89')"><img src="images/lampara_ikea.jpg" class="card-img-top"><div class="card-body text-center"><h5>Lámpara IKEA</h5><p>$89</p></div></div></div>
-        <div class="col"><div class="card zoom" onclick="openModal('Espejo Decorativo - $149')"><img src="images/espejo_decorativo.jpg" class="card-img-top"><div class="card-body text-center"><h5>Espejo Decorativo</h5><p>$149</p></div></div></div>
-        <div class="col"><div class="card zoom" onclick="openModal('Reloj de Pared - $45')"><img src="images/reloj_pared.jpg" class="card-img-top"><div class="card-body text-center"><h5>Reloj de Pared</h5><p>$45</p></div></div></div>
+      <!-- MUEBLES -->
+      <section class="mb-5">
+        <h2 class="text-danger mb-4"><i class="fas fa-couch me-2"></i>Muebles</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col"><div class="card zoom"><img src="images/sofa_moderno.jpg" class="card-img-top"><div class="card-body text-center"><h5>Sofá Moderno Ashley</h5><p>$799</p><button onclick="openModal('Sofá Moderno Ashley - $799')" class="btn btn-danger">Lo quiero</button></div></div></div>
+        </div>
+      </section>
+
+      <!-- BAÑO Y COCINA -->
+      <section class="mb-5">
+        <h2 class="text-danger mb-4"><i class="fas fa-shower me-2"></i>Baño y Cocina</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col"><div class="card zoom"><img src="images/llave_moen.jpg" class="card-img-top"><div class="card-body text-center"><h5>Llave Moen</h5><p>$99</p><button onclick="openModal('Llave Moen de Cocina - $99')" class="btn btn-danger">Lo quiero</button></div></div></div>
+          <div class="col"><div class="card zoom"><img src="images/ducha_delta.jpg" class="card-img-top"><div class="card-body text-center"><h5>Ducha Delta</h5><p>$129</p><button onclick="openModal('Ducha Delta de Alta Presión - $129')" class="btn btn-danger">Lo quiero</button></div></div></div>
+        </div>
+      </section>
+
+      <!-- ILUMINACIÓN -->
+      <section class="mb-5">
+        <h2 class="text-danger mb-4"><i class="fas fa-lightbulb me-2"></i>Iluminación</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col"><div class="card zoom"><img src="images/lampara_ikea.jpg" class="card-img-top"><div class="card-body text-center"><h5>Lámpara IKEA</h5><p>$89</p><button onclick="openModal('Lámpara IKEA - $89')" class="btn btn-danger">Lo quiero</button></div></div></div>
+        </div>
+      </section>
+
+      <!-- DECORACIÓN -->
+      <section>
+        <h2 class="text-danger mb-4"><i class="fas fa-paint-brush me-2"></i>Decoración</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col"><div class="card zoom"><img src="images/espejo_decorativo.jpg" class="card-img-top"><div class="card-body text-center"><h5>Espejo Decorativo</h5><p>$149</p><button onclick="openModal('Espejo Decorativo - $149')" class="btn btn-danger">Lo quiero</button></div></div></div>
+          <div class="col"><div class="card zoom"><img src="images/reloj_pared.jpg" class="card-img-top"><div class="card-body text-center"><h5>Reloj de Pared</h5><p>$45</p><button onclick="openModal('Reloj de Pared - $45')" class="btn btn-danger">Lo quiero</button></div></div></div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Modal WhatsApp -->
+  <div class="modal fade" id="productModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body text-center">
+          <p id="productMessage">¿Te interesa este artículo? Escríbenos y recibe el tuyo.</p>
+          <a href="#" id="whatsappLink" class="btn btn-success mt-2" target="_blank">Escríbenos por WhatsApp</a>
+        </div>
       </div>
     </div>
-  </section>
-
-  <div class="modal fade" id="productModal" tabindex="-1">
-    <div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-body text-center">
-      <p id="productMessage">¿Te interesa este artículo? Escríbenos y recibe el tuyo.</p>
-      <a href="#" id="whatsappLink" class="btn btn-success mt-2" target="_blank">Escríbenos por WhatsApp</a>
-    </div></div></div>
   </div>
 
-  <div class="modal fade" id="languageModal" tabindex="-1">
-    <div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-body text-center">
-      <p>¿Quieres ver esta página en inglés?</p>
-      <button class="btn btn-primary me-2" onclick="switchLang('en')" data-bs-dismiss="modal">Sí, cambiar</button>
-      <button class="btn btn-secondary" data-bs-dismiss="modal">No, gracias</button>
-    </div></div></div>
-  </div>
-
-  <footer class="bg-primary text-white text-center p-3 mt-5">
+  <!-- Footer -->
+  <footer class="text-white text-center py-3" style="background-color:#8B0000;">
     <p>&copy; 2025 Altitud. Todos los derechos reservados.</p>
   </footer>
 
+  <script src="https://kit.fontawesome.com/a2d9d5a72d.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="script.js"></script>
 </body>
